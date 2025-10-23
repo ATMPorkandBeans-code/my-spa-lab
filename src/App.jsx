@@ -7,13 +7,17 @@ import Header from './components/header'
 import ProjectDisplay from './components/projectDisplay'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [projects, editProjects] = useState([])
 
+  function addProject (newProject){
+    editProjects((prevArray) => [...prevArray, newProject])
+  }
+console.log(projects)
   return (
     
       <div>
       <Header />
-      <ProjectForm />
+      <ProjectForm addProject={addProject}/>
       <ProjectDisplay />
       </div>
       
