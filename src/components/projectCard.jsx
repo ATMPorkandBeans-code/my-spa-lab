@@ -1,8 +1,16 @@
 import React from "react";
+// import { Card } from "semantic-ui-css/semantic.min.css";
 
-function ProjectCard(){
-
-    return <h3>Project Card</h3>
+function ProjectCard({ project }) {
+  console.log(project);
+  return (
+    <div>
+     
+        <h2>{project.title}</h2>
+        <p>{project.description}</p>
+      
+    </div>
+  );
 }
 
-export default ProjectCard
+export default ProjectCard;
