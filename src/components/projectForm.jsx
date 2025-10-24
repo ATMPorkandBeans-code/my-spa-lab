@@ -6,11 +6,13 @@ function ProjectForm({ addProject }) {
     title: "",
     description: "",
   });
+//establishes state for adding new project
 
+//handles state change to update newProject variable
   function handleChange(e) {
     setNewProject({ ...newProject, [e.target.name]: e.target.value });
   }
-
+//Verifies and adds new project to Project Array 
   function handleSubmit(e) {
     e.preventDefault();
     addProject(newProject);

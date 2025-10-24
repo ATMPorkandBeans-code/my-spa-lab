@@ -1,13 +1,17 @@
 import React from "react";
-import styles from "../styles/projectCard.module.css"
+import styles from "../styles/projectCard.module.css";
 
 function ProjectCard({ project, deleteProject }) {
-  console.log(project);
   return (
     <div className={styles.card}>
       <h2>{project.title}</h2>
       <p>{project.description}</p>
-      <button className={styles.deleteButton} onClick={() => deleteProject(project)}>Delete Project</button>
+      <button
+        className={styles.deleteButton}
+        onClick={() => deleteProject(project)}
+      >
+        Delete Project
+      </button>
     </div>
   );
 }

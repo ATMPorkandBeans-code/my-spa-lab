@@ -1,19 +1,19 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import ProjectForm from "./components/projectForm";
 import Header from "./components/header";
 import ProjectDisplay from "./components/projectDisplay";
-import projectsArray from "./projectInfo.js"
+import projectsArray from "./projectInfo.js";
 
 function App() {
   const [projects, editProjects] = useState(projectsArray);
+//Establishes Projects Array and state to edit Array
 
+//Add new project to projectsArray
   function addProject(newProject) {
     editProjects((prevArray) => [...prevArray, newProject]);
   }
-
+//deletes selected project from Project Aray using Delete button in Project Card
   function deleteProject(projectToDelete) {
     const newArray = projects.filter((project) => {
       if (project.title === projectToDelete.title) {
@@ -24,7 +24,6 @@ function App() {
     editProjects(newArray);
   }
 
-  console.log(projects);
   return (
     <div>
       <Header />

@@ -5,7 +5,7 @@ function Header() {
   return (
     <div class={styles.header}>
       <h1 class={styles.appName}>Project Organizer</h1>
-      <h3>“Streamlining teamwork, one project at a time.”</h3>
+      <h3>“Streamlining Teamwork, one project at a time...”</h3>
     </div>
   );
 }
