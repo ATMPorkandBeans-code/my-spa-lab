@@ -1,14 +1,13 @@
 import React from "react";
-// import { Card } from "semantic-ui-css/semantic.min.css";
+import styles from "../styles/projectCard.module.css"
 
-function ProjectCard({ project }) {
+function ProjectCard({ project, deleteProject }) {
   console.log(project);
   return (
-    <div>
-     
-        <h2>{project.title}</h2>
-        <p>{project.description}</p>
-      
+    <div className={styles.card}>
+      <h2>{project.title}</h2>
+      <p>{project.description}</p>
+      <button className={styles.deleteButton} onClick={() => deleteProject(project)}>Delete Project</button>
     </div>
   );
 }

@@ -1,0 +1,38 @@
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  color: #f2e9e9;
+}
+
+/* Heading */
+.title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Search Bar */
+.searchBar {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  outline: none;
+}
+
+.searchBar:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 4px rgba(74, 144, 226, 0.4);
+}
+
+/* Project Cards Layout */
+.projectList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}

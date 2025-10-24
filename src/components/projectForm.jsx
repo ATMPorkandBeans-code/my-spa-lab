@@ -1,4 +1,5 @@
 import { useState, React } from "react";
+import styles from "../styles/projectForm.module.css";
 
 function ProjectForm({ addProject }) {
   const [newProject, setNewProject] = useState({
@@ -20,7 +21,7 @@ function ProjectForm({ addProject }) {
   }
 
   return (
-    <div>
+    <div className={styles.formContainer}>
       <h2>Add Project</h2>
       <form onSubmit={handleSubmit}>
         <label>Title</label>
@@ -32,13 +33,12 @@ function ProjectForm({ addProject }) {
           required
         ></input>
         <label>Description</label>
-        <input
-          type="text"
+        <textarea
           name="description"
           value={newProject.description}
           onChange={handleChange}
           required
-        ></input>
+        />
         <button>Add</button>
       </form>
     </div>
