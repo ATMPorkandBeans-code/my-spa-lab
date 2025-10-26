@@ -49,3 +49,23 @@
 .deleteButton:active {
   background-color: #a83232;
 }
+
+.editButton {
+  align-self: flex-start;
+  padding: 0.4rem 0.8rem;
+  background-color: #34baeb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.editButton:hover {
+  background-color: #34baeb;
+}
+
+.editButton:active {
+  background-color: #34baeb;
+}

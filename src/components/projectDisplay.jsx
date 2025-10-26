@@ -2,7 +2,7 @@ import { useState, React } from "react";
 import ProjectCard from "./projectCard";
 import styles from "../styles/projectDisplay.module.css";
 
-function ProjectDisplay({ projects, deleteProject }) {
+function ProjectDisplay({ projects, deleteProject, editProject }) {
   const [search, setSearch] = useState("");
   console.log(search);
 
@@ -26,7 +26,11 @@ function ProjectDisplay({ projects, deleteProject }) {
       />
       <div className={styles.projectList}>
         {filteredProjects.map((project) => (
-          <ProjectCard project={project} deleteProject={deleteProject} />
+          <ProjectCard
+            project={project}
+            deleteProject={deleteProject}
+            editProject={editProject}
+          />
         ))}
       </div>
     </div>

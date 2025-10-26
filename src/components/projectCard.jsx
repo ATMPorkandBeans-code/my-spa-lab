@@ -1,7 +1,9 @@
-import React from "react";
+import { useState, React } from "react";
 import styles from "../styles/projectCard.module.css";
 
-function ProjectCard({ project, deleteProject }) {
+function ProjectCard({ project, deleteProject, editProject }) {
+  // const [editProject, setEditProject] = useState("");
+
   return (
     <div className={styles.card}>
       <h2>{project.title}</h2>
@@ -11,6 +13,12 @@ function ProjectCard({ project, deleteProject }) {
         onClick={() => deleteProject(project)}
       >
         Delete Project
+      </button>
+      <button
+        className={styles.editButton}
+        onClick={() => editProject(project)}
+      >
+        Edit
       </button>
     </div>
   );

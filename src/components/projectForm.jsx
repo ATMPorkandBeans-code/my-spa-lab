@@ -1,7 +1,7 @@
-import { useState, React } from "react";
+import { useState, React, useEffect } from "react";
 import styles from "../styles/projectForm.module.css";
 
-function ProjectForm({ addProject }) {
+function ProjectForm({ addProject, editCard }) {
   const [newProject, setNewProject] = useState({
     title: "",
     description: "",
@@ -21,6 +21,17 @@ function ProjectForm({ addProject }) {
       description: "",
     });
   }
+
+  useEffect(() => {
+    if (editCard) {
+      setNewProject({
+        title: editCard.title || "",
+        description: editCard.description || "",
+      });
+    }
+  }, [editCard]);
+
+
 
   return (
     <div className={styles.formContainer}>
