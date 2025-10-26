@@ -8,18 +8,23 @@ function ProjectCard({ project, deleteProject, editProject }) {
     <div className={styles.card}>
       <h2>{project.title}</h2>
       <p>{project.description}</p>
+
+       <div className={styles.cardActions}>
+      <button
+              className={styles.editButton}
+              onClick={() => editProject(project)}
+            >
+              Edit
+            </button>
+
+
       <button
         className={styles.deleteButton}
         onClick={() => deleteProject(project)}
       >
-        Delete Project
+        Delete
       </button>
-      <button
-        className={styles.editButton}
-        onClick={() => editProject(project)}
-      >
-        Edit
-      </button>
+      </div>
     </div>
   );
 }

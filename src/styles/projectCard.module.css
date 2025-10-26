@@ -4,15 +4,13 @@
   padding: 1.2rem;
   margin: 1rem 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+  justify-content: space-between;
 
-.card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  /* Optional: you can keep or lower this if you want shorter cards */
+  min-height: 240px;
 }
 
 /* Title */
@@ -22,50 +20,45 @@
   color: #333;
 }
 
-/* Description text */
+/* Description - remove extra bottom margin & keep it clean */
 .card p {
-  margin: 0;
+  margin: 0; /* <-- was adding space before buttons */
   font-size: 0.95rem;
   color: #555;
   line-height: 1.4;
 }
 
-.deleteButton {
-  align-self: flex-start;
+/* Buttons at bottom with tighter spacing */
+.cardActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem; /* reduce from auto / large gap */
+}
+
+.deleteButton,
+.editButton {
   padding: 0.4rem 0.8rem;
-  background-color: #e04f4f;
-  color: white;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   font-size: 0.9rem;
+  color: white;
   transition: background-color 0.2s ease;
+}
+
+.deleteButton {
+  background-color: #e04f4f;
 }
 
 .deleteButton:hover {
   background-color: #c43f3f;
 }
 
-.deleteButton:active {
-  background-color: #a83232;
-}
-
 .editButton {
-  align-self: flex-start;
-  padding: 0.4rem 0.8rem;
   background-color: #34baeb;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 0.9rem;
-  transition: background-color 0.2s ease;
 }
 
 .editButton:hover {
-  background-color: #34baeb;
-}
-
-.editButton:active {
-  background-color: #34baeb;
+  background-color: #1aa5d5;
 }
